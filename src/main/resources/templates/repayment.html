@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xml:lang="en">
+<head>
+    <title th:remove="all">Template for HTML email Repayment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <p>
+        Dear <span th:text="${fullName}">Nguyen Thuy Minh</span>,
+    </p>
+    <p>
+        We would like to inform you that your payment transaction has been performed with following details:<br/>
+        <strong>Loan account no:</strong> <span th:text="${contractNumber}">#123444444</span> <br/>
+        <strong>Payment date:</strong> <span th:text="${#dates.format(paymentDate, 'dd/MM/yyyy HH:mm:ss')}">09/10/2020 10:10:10</span> <br/>
+        <strong>Payment amount:</strong> <span th:text="${#numbers.formatDecimal(paymentAmount, 0, 'COMMA', 0, 'POINT')}">10,000,000</span> VND
+    <ul>
+        <li>
+            Principal: <span th:text="${#numbers.formatDecimal(principalAmount, 0, 'COMMA', 0, 'POINT')}">2,000,000</span> VND <br/>
+        </li>
+        <li>
+            Interest: <span th:text="${#numbers.formatDecimal(interestAmount, 0, 'COMMA', 0, 'POINT')}">200,000</span> VND <br/>
+        </li>
+    </ul>
+    <strong>Loan balance after payment:</strong> <span th:text="${#numbers.formatDecimal(loanBalance, 0, 'COMMA', 0, 'POINT')}">8,000,000</span> VND
+    </p>
+    <p>
+        Should you need further information, please kindly contact our Service Point at tel 1900 0008 for assistance.
+    </p>
+    <p>
+        Best regards, <br/>
+        <strong>ABC Bank</strong>
+    </p>
+</body>
+</html>
