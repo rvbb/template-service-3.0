@@ -10,6 +10,7 @@
 	> Spring Data with 
 	> Swagger 3
 	> Openfeign & OkHttp3
+    > Gradle 7.5 + JDK 18 
 
 ### Features
 	* Provide simple crud 

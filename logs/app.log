@@ -1,0 +1,3 @@
+2022-10-18 21:42:15,741 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 18.0.2 on VN_LV00202-N with PID 23200 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-18 21:42:15,743 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-18 21:42:15,744 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"

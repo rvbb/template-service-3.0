@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="/usr/local/Cellar/gradle/7.4.1/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
+          <entry name="/usr/local/Cellar/gradle/7.4.1/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.4.1.Final/a177f0daf39b807f19906fc3a7c6af8985bd8c4a/mapstruct-processor-1.4.1.Final.jar" />
+          <entry name="/usr/local/Cellar/gradle/7.4.1/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.0.0-M5/1fdd9001342117a979fd31b81c372336f965df70/spring-boot-configuration-processor-3.0.0-M5.jar" />
+        </processorPath>
+        <module name="template-service-3.0.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="18" />
+  </component>
+</project>

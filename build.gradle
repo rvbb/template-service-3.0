@@ -1,48 +1,45 @@
 plugins {
-    id 'org.springframework.boot' version '2.4.3'
-    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'org.springframework.boot' version '3.0.0-M5'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
     id 'java'
     id 'idea'
 }
 
-group = 'com.rvbb.api.template'
-version = '1.0.0-dev'
-sourceCompatibility = '1.8'
+group = 'com.rvbb.food.template'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
     maven { url 'https://repo.spring.io/plugins-release' }
     maven { url 'https://repo.spring.io/milestone' }
-    maven { url 'https://repo.spring.io/snapshot' }
-    maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
-    jcenter()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework:spring-aop:5.2.2.RELEASE'
+    implementation 'org.springframework:spring-aop:5.3.23'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation  'org.postgresql:postgresql:42.2.18'
-    implementation 'io.springfox:springfox-swagger2:2.9.2'
-    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
-    implementation 'org.mockito:mockito-junit-jupiter:2.23.0'
-    implementation 'org.aspectj:aspectjweaver:1.9.2'
-    implementation 'javax.xml.bind:jaxb-api:2.3.1'
-    implementation 'org.apache.commons:commons-lang3:3.9'
-    implementation 'org.apache.httpcomponents:httpclient:4.5.10'
-    implementation "org.json:json:20190722"
-    implementation 'commons-io:commons-io:2.6'
-    implementation 'net.logstash.logback:logstash-logback-encoder:6.4'
-    implementation 'org.mapstruct:mapstruct:1.4.1.Final'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '3.0.1'
-    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '5.0.0-alpha.2'
-    implementation 'junit:junit:4.12'
-    implementation group: 'com.netflix.hystrix', name: 'hystrix-core', version: '1.5.18'
+    implementation  'org.postgresql:postgresql:42.5.0'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    runtimeOnly 'org.aspectj:aspectjweaver:1.9.9.1'
 
-    compileOnly 'org.projectlombok:lombok:1.18.16'
-    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation "org.json:json:20220924"
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'net.logstash.logback:logstash-logback-encoder:7.2'
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.1.4'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    implementation 'com.netflix.hystrix:hystrix-core:1.5.18'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.1.Final'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
@@ -57,9 +54,9 @@ test {
 
 task fatJar(type: Jar) {
     manifest {
-        def manifest = attributes 'Implementation-Title': 'Template Services',
+        def manifest = attributes 'Implementation-Title': 'Template Services 3.0',
                 'Implementation-Version': project.version,
-                'Main-Class': 'com.rvbb.api.template.LmsServiceApplication'
+                'Main-Class': 'com.rvbb.food.template.TemplateApplication'
         manifest
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }

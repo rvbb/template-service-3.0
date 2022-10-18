@@ -1,8 +1,8 @@
-package com.rvbb.api.template;
+package com.rvbb.food.template;
 
-import com.rvbb.api.template.dto.adapter.BankListDemo;
-import com.rvbb.api.template.dto.adapter.Cif;
-import com.rvbb.api.template.service.impl.CifService;
+import com.rvbb.food.template.dto.adapter.BankListDemo;
+import com.rvbb.food.template.dto.adapter.Cif;
+import com.rvbb.food.template.service.impl.CifService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
