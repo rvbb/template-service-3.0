@@ -4,7 +4,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-10-18T21:28:21+0700",
+    date = "2022-10-19T22:22:27+0700",
     comments = "version: 1.4.1.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 18.0.2 (Amazon.com Inc.)"
 )
 public class BigDecimalMapperImpl implements BigDecimalMapper {

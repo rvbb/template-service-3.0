@@ -1,0 +1,54 @@
+cif:
+  apis: http://localhost:20210/customer/cif
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        loggerLevel: full
+        readTimeout: 5000
+logging:
+  level:
+    io:
+      swagger:
+        models:
+          parameters:
+            AbstractSerializableParameter: error
+    root: INFO
+pagin:
+  page: 0
+paging:
+  size: 30
+  size.allowed_max: 500
+resttemplate:
+  connection:
+    timeout: 6000
+  reading:
+    timeout: 5000
+server:
+  max-http-header-size: 600000
+  port: ${PORT:8080}
+spring:
+  application:
+    name: template-service-3.0
+  datasource:
+    password: ${DB_PWD:Devdev123}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_DATABASE:postgres}?useSSL=false
+    username: ${DB_USER:postgres}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: true
+  main:
+    banner-mode: 'off'
+#    allow-bean-definition-overriding: true
+
+app:
+  descr: ^project.description^
+  ver: ^project.version^

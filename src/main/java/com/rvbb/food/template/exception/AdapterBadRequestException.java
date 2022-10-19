@@ -1,13 +1,13 @@
 package com.rvbb.food.template.exception;
 
-import com.netflix.hystrix.exception.HystrixBadRequestException;
+import org.springframework.http.HttpHeaders;
+
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.http.HttpHeaders;
 
 @Getter
 @Setter
-public class AdapterBadRequestException extends HystrixBadRequestException {
+public class AdapterBadRequestException extends RuntimeException {
 
     private final int status;
     private final HttpHeaders headers;

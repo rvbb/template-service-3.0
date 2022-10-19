@@ -20,11 +20,10 @@
 
 ### Unit Test
 	API docs:  
-	    Browse APIs via swagger: http://localhost:8080/swagger-ui.html#
-	SQL: 
+	    Browse APIs via swagger: http://localhost:8080/api-docs
+	PostgreSQL: 
+        1. Start docker: 
+        ```
+        docker run --name basic-postgres --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Devdev123 -e PGDATA=/var/lib/postgresql/data/pgdata -v /tmp:/var/lib/postgresql/data -p 5432:5432 -it postgres:14.1-alpine
+        ```
 	    [SQL DDL](resources/static/finance_info.sql)
-	Postman:    
-	    [Postman project](resource/static/postman.template-service.xml)
-	Cif APIs:    
-	    - Clone https://github.com/rvbb/webflux-demo.git	    
-	    - Build template-service

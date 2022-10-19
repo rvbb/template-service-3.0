@@ -31,6 +31,7 @@ import java.util.Map;
 @Slf4j
 @Repository
 @AllArgsConstructor
+@SuppressWarnings(value = "uncheckd")
 public class FinanceInfoXpanRepositoryImpl implements IFinanceInfoXpanRepository {
 
     @PersistenceContext

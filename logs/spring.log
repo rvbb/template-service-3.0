@@ -1,4 +1,4 @@
-2022-10-18 21:42:16,402 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+2022-10-19 15:38:32,166 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
 	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
@@ -42,3 +42,603 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletReque
 	at java.base/java.lang.Class.forName(Class.java:467)
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 32 common frames omitted
+2022-10-19 21:10:31,917 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '@' that cannot start any token. (Do not use @ for indentation)
+ in 'reader', line 52, column 10:
+      descr: @project.description@
+             ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:463)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:256)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:680)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:171)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136)
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116)
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:221)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:190)
+	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:317)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:308)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:293)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:194)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:321)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:312)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:293)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:194)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:500)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:198)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:166)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:95)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:128)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:86)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:116)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:242)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:229)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at com.rvbb.food.template.TemplateApplication.main(TemplateApplication.java:12)
+2022-10-19 21:13:56,637 ERROR org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2022-10-19 21:13:56,638 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2022-10-19 21:13:56,690 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1754)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1141)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:916)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:442)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at com.rvbb.food.template.TemplateApplication.main(TemplateApplication.java:12)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1750)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:98)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:68)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:176)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:107)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:333)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:247)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	... 37 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 51 common frames omitted
+2022-10-19 21:28:08,618 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:28:08,655 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:31:53,222 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:31:53,289 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:34:47,353 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:34:47,391 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:35:52,144 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:35:52,188 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:38:23,959 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:38:24,000 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:41:38,067 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cif.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] for bean 'cif.FeignClientSpecification' since there is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] bound.
+2022-10-19 21:41:38,100 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'cif.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-10-19 21:45:53,773 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cifApis.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] for bean 'cifApis.FeignClientSpecification' since there is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] bound.
+2022-10-19 21:45:53,804 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'cifApis.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-10-19 21:48:12,481 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cifApis.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] for bean 'cifApis.FeignClientSpecification' since there is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] bound.
+2022-10-19 21:48:12,507 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'cifApis.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-10-19 21:48:24,238 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cifApis.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] for bean 'cifApis.FeignClientSpecification' since there is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] bound.
+2022-10-19 21:48:24,269 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'cifApis.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-10-19 21:49:17,356 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cifApis.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] for bean 'cifApis.FeignClientSpecification' since there is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] bound.
+2022-10-19 21:49:17,384 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'cifApis.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-10-19 21:49:31,515 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'cif-api.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] for bean 'cif-api.FeignClientSpecification' since there is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null] bound.
+2022-10-19 21:49:31,536 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'cif-api.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-10-19 21:50:40,190 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:50:40,237 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:51:30,676 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:51:30,763 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:53:35,383 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:53:35,452 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:54:29,484 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:54:29,531 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:54:51,411 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:54:51,456 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:55:15,305 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:55:15,335 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:55:54,041 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:55:54,093 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 21:56:13,445 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 21:56:13,498 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:22:33,573 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:22:33,649 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:28:54,335 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.rvbb.food.template.service.adapter.CifClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-19 22:28:54,385 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'com.rvbb.food.template.service.adapter.CifClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rvbb.food.template.service.adapter.CifClient' in your configuration.
+
+2022-10-19 22:29:39,536 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:29:39,578 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:30:03,189 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:30:03,222 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:30:45,132 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:30:45,200 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:31:35,187 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:31:35,274 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:32:28,994 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:32:29,054 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:35:32,648 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:35:32,705 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:38:35,048 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:38:35,098 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+
+2022-10-19 22:47:12,916 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cifService' defined in file [/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main/com/rvbb/food/template/service/impl/CifService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'com.rvbb.food.template.service.adapter.CifClient': Unexpected exception during bean creation
+2022-10-19 22:47:12,986 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.rvbb.food.template.service.impl.CifService required a bean of type 'org.springframework.cloud.openfeign.FeignContext' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cloud.openfeign.FeignContext' in your configuration.
+

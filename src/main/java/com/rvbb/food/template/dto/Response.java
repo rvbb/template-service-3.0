@@ -1,7 +1,8 @@
 package com.rvbb.food.template.dto;
 
 import com.rvbb.food.template.controller.handler.Error;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,9 +16,9 @@ import org.springframework.http.HttpStatus;
 @Builder
 @ToString
 public class Response<T> {
-    @ApiModelProperty(notes = "error code")
+    @Schema(title = "error code")
     private Error status;
-    @ApiModelProperty(notes = "data of response")
+    @Schema(title = "data of response")
     private T data;
 
     public static <T> Response<T> ok(T data) {

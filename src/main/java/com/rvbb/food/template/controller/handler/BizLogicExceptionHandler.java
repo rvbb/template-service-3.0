@@ -1,9 +1,12 @@
 package com.rvbb.food.template.controller.handler;
 
-import com.rvbb.food.template.dto.Response;
-import com.rvbb.food.template.exception.BizLogicException;
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+import static org.springframework.http.HttpStatus.CONFLICT;
+import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.UNSUPPORTED_MEDIA_TYPE;
 
-import lombok.extern.slf4j.Slf4j;
+import java.util.Objects;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
@@ -12,7 +15,6 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
-import org.springframework.lang.NonNull;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
@@ -24,12 +26,12 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.rvbb.food.template.dto.Response;
+import com.rvbb.food.template.exception.BizLogicException;
+
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;
-
-import java.util.Objects;
-
-import static org.springframework.http.HttpStatus.*;
+import lombok.extern.slf4j.Slf4j;
 
 @ControllerAdvice
 @Slf4j

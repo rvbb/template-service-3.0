@@ -1,134 +1,185 @@
 package com.rvbb.food.template.controller;
 
-import com.rvbb.food.template.controller.handler.Error;
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoInput;
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
-import com.rvbb.food.template.dto.Response;
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
-import io.swagger.annotations.*;
-import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.*;
-
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.Min;
 import java.util.List;
 
-@Api(value = "Loan financial information API")
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.rvbb.food.template.controller.handler.Error;
+import com.rvbb.food.template.dto.Response;
+import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
+import com.rvbb.food.template.dto.financeinfo.FinanceInfoInput;
+import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+
+@Tag(name = "Loan financial information API")
 @RequestMapping("finance")
 public interface IFinanceInfoController {
-    @ApiOperation(value = "Create")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
-    })
+    @Operation(summary = "Create",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Success",
+                            content = @Content(schema = @Schema(implementation = FinanceInfoInput.class))),
+                    @ApiResponse(responseCode = "400", description = "Bad request",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+            })
     @PostMapping
     Response<FinanceInfoRes> create(@Valid @RequestBody FinanceInfoInput request);
 
-    @ApiOperation(value = "Get last")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoRes.class),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
-    })
+    @Operation(description = "Get last",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Success",
+                            content = @Content(schema = @Schema(implementation = FinanceInfoRes.class))),
+                    @ApiResponse(responseCode = "400", description = "Bad request",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                            content = @Content(schema = @Schema(implementation = Error.class)))
+            })
     @GetMapping("/last")
     Response<FinanceInfoRes> getLast();
 
-    @ApiOperation(value = "Update")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
-    })
+    @Operation(description = "Update",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Success",
+                            content = @Content(schema = @Schema(implementation = FinanceInfoRes.class))),
+                    @ApiResponse(responseCode = "400", description = "Bad request",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                            content = @Content(schema = @Schema(implementation = Error.class)))
+            })
     @PutMapping("/{uuid}")
     Response<FinanceInfoRes> update(@PathVariable String uuid, @Valid @RequestBody FinanceInfoInput request);
 
-    @ApiOperation(value = "Read One")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
-    })
+    @Operation(description = "Read One",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Success",
+                            content = @Content(schema = @Schema(implementation = FinanceInfoRes.class))),
+                    @ApiResponse(responseCode = "400", description = "Bad request",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                            content = @Content(schema = @Schema(implementation = Error.class)))
+            })
     @GetMapping("/{uuid}")
     Response<FinanceInfoRes> get(@PathVariable String uuid);
 
-    @ApiOperation(value = "List")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class, responseContainer = "List"),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
-    })
+    @Operation(description = "List",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Success",
+                            content = @Content(array = @ArraySchema(uniqueItems = false, schema = @Schema(implementation = FinanceInfoInput.class)))),
+                    @ApiResponse(responseCode = "400", description = "Bad request",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                            content = @Content(schema = @Schema(implementation = Error.class))),
+                    @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                            content = @Content(schema = @Schema(implementation = Error.class)))
+            })
     @GetMapping("/list")
     Response<List<FinanceInfoRes>> list();
 
-    @ApiOperation(value = "Delete One")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
+    @Operation(description = "Delete One",
+    responses = {
+        @ApiResponse(responseCode = "200", description = "Success",
+                content = @Content(schema = @Schema(implementation = FinanceInfoInput.class))),
+        @ApiResponse(responseCode = "400", description = "Bad request",
+                content = @Content(schema = @Schema(implementation = Error.class))),
+        @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                content = @Content(schema = @Schema(implementation = Error.class))),
+        @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                content = @Content(schema = @Schema(implementation = Error.class))),
+        @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                content = @Content(schema = @Schema(implementation = Error.class)))
     })
     @DeleteMapping("/{uuid}")
     Response<FinanceInfoRes> del(@PathVariable String uuid);
 
-    @ApiOperation(value = "Filter")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class, responseContainer = "PagedListHolder"),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
+    @Operation(description = "Filter",responses = {
+            @ApiResponse(responseCode = "200", description = "Success",
+                    content = @Content(schema = @Schema(implementation = FinanceInfoInput.class))),
+            @ApiResponse(responseCode = "400", description = "Bad request",
+                    content = @Content(schema = @Schema(implementation = Error.class))),
+            @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                    content = @Content(schema = @Schema(implementation = Error.class))),
+            @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                    content = @Content(schema = @Schema(implementation = Error.class))),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                    content = @Content(schema = @Schema(implementation = Error.class)))
     })
     @PostMapping("/filter")
     Response<Page<FinanceInfoRes>> filter(@Valid @RequestBody FinanceInfoFilterInput filter);
 
-    @ApiOperation(value = "Filter with Pageable")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = FinanceInfoInput.class, responseContainer = "PagedListHolder"),
-            @ApiResponse(code = 400, message = "Bad request", response = Error.class),
-            @ApiResponse(code = 404, message = "Not Found Exception", response = Error.class),
-            @ApiResponse(code = 409, message = "Conflict Exception", response = Error.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)
+    @Operation(description = "Filter with Pageable",responses = {
+            @ApiResponse(responseCode = "200", description = "Success",
+                    content = @Content(array = @ArraySchema(uniqueItems = false, schema = @Schema(implementation = FinanceInfoRes.class)))),
+            @ApiResponse(responseCode = "400", description = "Bad request",
+                    content = @Content(schema = @Schema(implementation = Error.class))),
+            @ApiResponse(responseCode = "404", description = "Not Found Exception",
+                    content = @Content(schema = @Schema(implementation = Error.class))),
+            @ApiResponse(responseCode = "409", description = "Conflict Exception",
+                    content = @Content(schema = @Schema(implementation = Error.class))),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                    content = @Content(schema = @Schema(implementation = Error.class)))
     })
     @GetMapping("/filter")
     Response<Page<FinanceInfoRes>> filter(
-            @ApiParam(
+            @Parameter(
                     name = "sort",
-                    type = "String",
-                    value = "multi column/field name and value",
+                    description = "multi column/field name and value",
                     example = "sort=desc(col1)&sort=asc(col3)",
                     required = false)
-            @RequestParam(defaultValue = "desc(id)", required=false) String[] sort,
-            @ApiParam(
+            @RequestParam(defaultValue = "desc(id)", required = false) String[] sort,
+            @Parameter(
                     name = "condition",
-                    type = "String",
-                    value = "multi column/field name and value",
+                    description = "multi column/field name and value",
                     example = "condition=condition=equal(col1:1)&condition=greater(col2:abc)",
                     required = false)
-            @RequestParam(required=false) String[] condition,
-            @ApiParam(
+            @RequestParam(required = false) String[] condition,
+            @Parameter(
                     name = "page",
-                    type = "String",
-                    value = "current page number into ",
+                    description = "current page number into ",
                     example = "1",
                     required = false)
-            @RequestParam(defaultValue = "0", required=false) @Valid @Min(value = 0L, message = "The value must be positive") int page,
-            @ApiParam(
+            @RequestParam(defaultValue = "0", required = false) @Valid @Min(value = 0L,
+                    message = "The value must be positive") int page,
+            @Parameter(
                     name = "size",
-                    type = "int",
-                    value = "page size - number of item per page",
+                    description = "page size - number of item per page",
                     example = "50",
                     required = false)
-            @RequestParam(defaultValue = "50", required=false) @Valid @Min(value = 0L, message = "The value must be positive") int size);
+            @RequestParam(defaultValue = "50", required = false) @Valid @Min(value = 0L,
+                    message = "The value must be positive") int size);
 }
