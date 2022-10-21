@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CifServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CifServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.rvbb.food.template.html">com.rvbb.food.template</a> &gt; CifServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.815s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">givenCifRequest_whenAddCif_thenCreateNewOne()</td>
+<td class="success">0.163s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenNotExistedBase_whenGetCif_thenReturnEmpty()</td>
+<td class="success">0.367s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenUser_whenGetCif_thenReturnManyCifs()</td>
+<td class="success">0.145s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenVCB_whenGetCif_thenReturnOneCif()</td>
+<td class="success">0.140s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-10-21 14:51:04 WARN  o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer:78 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/usr/local/Cellar/gradle/7.4.1/caches/modules-2/files-2.1/org.json/json/20220924/5aa95e7688f76c664af205c5937620f02688dfbc/json-20220924.jar!/org/json/JSONObject.class
+	jar:file:/usr/local/Cellar/gradle/7.4.1/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2022-10-21 14:51:04 INFO  o.h.v.i.u.Version:21 - HV000001: Hibernate Validator 7.0.5.Final
+2022-10-21 14:51:04 INFO  c.r.f.t.CifServiceTest:55 - Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 63341 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:51:04 DEBUG c.r.f.t.CifServiceTest:56 - Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:51:04 INFO  c.r.f.t.CifServiceTest:651 - No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-10-21 14:51:06 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-21 14:51:06 INFO  o.h.Version:44 - HHH000412: Hibernate ORM core version 6.1.3.Final
+2022-10-21 14:51:06 WARN  o.h.o.deprecation:626 - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-10-21 14:51:06 INFO  SQL dialect:66 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-10-21 14:51:07 INFO  c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+2022-10-21 14:51:07 INFO  c.z.h.p.HikariPool:565 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b0d4873
+2022-10-21 14:51:07 INFO  c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+2022-10-21 14:51:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:51 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-21 14:51:08 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:227 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-21 14:51:10 INFO  c.r.f.t.CifServiceTest:61 - Started CifServiceTest in 5.95 seconds (process running for 7.25)
+2022-10-21 14:51:10 INFO  c.r.f.t.c.LoggerConfig:32 - API = http://localhost:80
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] ---&gt; GET http://localhost:20210/customer/cif?base=not%20existence HTTP/1.1
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] ---&gt; END HTTP (0-byte body)
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] &lt;--- HTTP/1.1 200 OK (137ms)
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] connection: close
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] expires: 0
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] pragma: no-cache
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] 
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] []
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] &lt;--- END HTTP (2-byte body)
+2022-10-21 14:51:10 INFO  c.r.f.t.c.LoggerConfig:32 - API = http://localhost:80
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] ---&gt; GET http://localhost:20210/customer/cif?base=Users HTTP/1.1
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] ---&gt; END HTTP (0-byte body)
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] &lt;--- HTTP/1.1 200 OK (132ms)
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] connection: close
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] expires: 0
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] pragma: no-cache
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] 
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] [
+    {
+        &quot;_id&quot;: &quot;604ee8b4a91a422bfea0dae7&quot;,
+        &quot;description&quot;: &quot;Using credit and loan&quot;,
+        &quot;base&quot;: &quot;User&quot;,
+        &quot;strict&quot;: true,
+        &quot;idInjection&quot;: false,
+        &quot;_class&quot;: &quot;webflux.demo.customer.model.Cif&quot;
+    },
+    {
+        &quot;_id&quot;: &quot;604ee8b4a91a422bfea0dae8&quot;,
+        &quot;description&quot;: &quot;Using credit and loan 2&quot;,
+        &quot;base&quot;: &quot;User 2&quot;,
+        &quot;strict&quot;: true,
+        &quot;idInjection&quot;: false,
+        &quot;_class&quot;: &quot;webflux.demo.customer.model.Cif&quot;
+    }
+]
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] &lt;--- END HTTP (474-byte body)
+2022-10-21 14:51:10 INFO  c.r.f.t.c.LoggerConfig:32 - API = http://localhost:80
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] ---&gt; POST http://localhost:20210/customer/cif HTTP/1.1
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] Accept: application/json
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] Content-Length: 152
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] Content-Type: application/json
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] 
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] {&quot;description&quot;:&quot;UT create cif&quot;,&quot;base&quot;:&quot;Test&quot;,&quot;strict&quot;:true,&quot;idInjection&quot;:false,&quot;bankList&quot;:[{&quot;id&quot;:0,&quot;bankName&quot;:&quot;bankname Test&quot;,&quot;type&quot;:1,&quot;created&quot;:null}]}
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] ---&gt; END HTTP (152-byte body)
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] &lt;--- HTTP/1.1 201 Created (127ms)
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] connection: close
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] expires: 0
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] pragma: no-cache
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] transfer-encoding: chunked
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] x-content-type-options: nosniff
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] x-frame-options: DENY
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] 
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] {
+    &quot;name&quot;: &quot;Customer c&quot;,
+    &quot;description&quot;: &quot;UT create cif&quot;,
+    &quot;base&quot;: &quot;Test&quot;,
+    &quot;idInjection&quot;: false,
+    &quot;strict&quot;: true,
+    &quot;banklist&quot;: [
+        {
+            &quot;bankName&quot;: &quot;bankname Test&quot;,
+            &quot;type&quot;: 1
+        }
+    ]
+}
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#createNewCif] &lt;--- END HTTP (238-byte body)
+2022-10-21 14:51:10 INFO  c.r.f.t.c.LoggerConfig:32 - API = http://localhost:80
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] ---&gt; GET http://localhost:20210/customer/cif?base=VCB HTTP/1.1
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:51:10 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] ---&gt; END HTTP (0-byte body)
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] &lt;--- HTTP/1.1 200 OK (130ms)
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] connection: close
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] expires: 0
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] pragma: no-cache
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] 
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] [
+    {
+        &quot;_id&quot;: &quot;604ee8b4a91a422bfea0dae9&quot;,
+        &quot;description&quot;: &quot;VCB Test get once&quot;,
+        &quot;base&quot;: &quot;VCB&quot;,
+        &quot;strict&quot;: true,
+        &quot;idInjection&quot;: false,
+        &quot;_class&quot;: &quot;webflux.demo.customer.model.Cif&quot;
+    }
+]
+2022-10-21 14:51:11 DEBUG c.r.f.t.s.a.CifClient:72 - [CifClient#getCif] &lt;--- END HTTP (231-byte body)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Oct 21, 2022, 2:51:11 PM</p>
+</div>
+</div>
+</body>
+</html>

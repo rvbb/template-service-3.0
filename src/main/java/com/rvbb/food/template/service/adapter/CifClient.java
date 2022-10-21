@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.rvbb.food.template.config.FeignConfig;
 import com.rvbb.food.template.dto.adapter.Cif;
 
-@FeignClient(value = "cif-api", url = "${cif.apis}")
+@FeignClient(contextId = "cifApis", name = "cif-api", url = "${cif.apis}", configuration = FeignConfig.class)
 public interface CifClient {
 
     @GetMapping(consumes = "application/json")

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,24 +22,24 @@ class CifServiceTest {
 
     /*	{
         "_id" : ObjectId("604ee8b4a91a422bfea0dae7"),
-            "description" : "Using credit and loan",
-            "base" : "User",
-            "strict" : true,
-            "idInjection" : false,
-            "_class" : "webflux.demo.customer.model.Cif"
+        "description" : "Using credit and loan",
+        "base" : "User",
+        "strict" : true,
+        "idInjection" : false,
+        "_class" : "webflux.demo.customer.model.Cif"
     }*/
     @Test
-    void givenUser_whenGetCif_thenReturnOneCif() {
-        String base = "User";
+    void givenUser_whenGetCif_thenReturnManyCifs() {
+        String base = "Users";
         List<Cif> cifList = service.getCif(base);
         assertTrue(cifList != null && cifList.size() > 0);
     }
 
     @Test
-    void givenVCB_whenGetCif_thenReturnManyCifs() {
+    void givenVCB_whenGetCif_thenReturnOneCif() {
         String base = "VCB";
         List<Cif> cifList = service.getCif(base);
-        assertTrue(cifList != null && cifList.size() > 1);
+        assertTrue(cifList != null && base.equals(cifList.get(0).getBase()) );
     }
 
     @Test
@@ -51,11 +52,11 @@ class CifServiceTest {
     /*
         {
             "name": "Customer c",
-                "description": "customer cccccccccccccccccc",
-                "base": "VCB",
-                "idInjection": true,
-                "strict": false,
-                "banklist": [{"bankName":"Vietinbnak", "type":1}]
+            "description": "customer cccccccccccccccccc",
+            "base": "VCB",
+            "idInjection": true,
+            "strict": false,
+            "banklist": [{"bankName":"Vietinbnak", "type":1}]
         }
     */
     @Test

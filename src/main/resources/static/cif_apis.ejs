@@ -1,0 +1,172 @@
+{
+	"port": 20210,
+	"protocol": "http",
+	"stubs": [{
+			"predicates": [{
+				"deepEquals": {
+					"method": "POST",
+					"path": "/customer/cif"
+				}
+			}],
+			"responses": [{
+				"is": {
+					"statusCode": 201,
+					"headers": {
+						"X-Content-Type-Options": "nosniff",
+						"X-XSS-Protection": "1; mode=block",
+						"Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+						"Pragma": "no-cache",
+						"Expires": "0",
+						"X-Frame-Options": "DENY",
+						"Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Transfer-Encoding": "chunked",
+						"Connection": "close"
+					},
+					"body": {
+						"name": "Customer c",
+						"description": "UT create cif",
+						"base": "Test",
+						"idInjection": false,
+						"strict": true,
+						"banklist": [{
+							"bankName": "bankname Test",
+							"type": 1
+						}]
+					},
+					"_mode": "text",
+					"_proxyResponseTime": 117
+				},
+				"_behaviors": {
+					"wait": 117
+				}
+			}]
+		},
+
+		{
+			"predicates": [{
+				"deepEquals": {
+					"method": "GET",
+					"query": {
+						"base": "Users"
+					},
+					"path": "/customer/cif"
+				}
+			}],
+			"responses": [{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"X-Content-Type-Options": "nosniff",
+						"X-XSS-Protection": "1; mode=block",
+						"Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+						"Pragma": "no-cache",
+						"Expires": "0",
+						"X-Frame-Options": "DENY",
+						"Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Transfer-Encoding": "chunked",
+						"Connection": "close"
+					},
+					"body": [{
+							"_id": "604ee8b4a91a422bfea0dae7",
+							"description": "Using credit and loan",
+							"base": "User",
+							"strict": true,
+							"idInjection": false,
+							"_class": "webflux.demo.customer.model.Cif"
+						},
+						{
+							"_id": "604ee8b4a91a422bfea0dae8",
+							"description": "Using credit and loan 2",
+							"base": "User 2",
+							"strict": true,
+							"idInjection": false,
+							"_class": "webflux.demo.customer.model.Cif"
+						}
+					],
+					"_mode": "text",
+					"_proxyResponseTime": 117
+				},
+				"_behaviors": {
+					"wait": 117
+				}
+			}]
+		},
+		{
+			"predicates": [{
+				"deepEquals": {
+					"method": "GET",
+					"query": {
+						"base": "VCB"
+					},
+					"path": "/customer/cif"
+				}
+			}],
+			"responses": [{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"X-Content-Type-Options": "nosniff",
+						"X-XSS-Protection": "1; mode=block",
+						"Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+						"Pragma": "no-cache",
+						"Expires": "0",
+						"X-Frame-Options": "DENY",
+						"Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Transfer-Encoding": "chunked",
+						"Connection": "close"
+					},
+					"body": [{
+						"_id": "604ee8b4a91a422bfea0dae9",
+						"description": "VCB Test get once",
+						"base": "VCB",
+						"strict": true,
+						"idInjection": false,
+						"_class": "webflux.demo.customer.model.Cif"
+					}],
+					"_mode": "text",
+					"_proxyResponseTime": 117
+				},
+				"_behaviors": {
+					"wait": 117
+				}
+			}]
+		},
+		{
+			"predicates": [{
+				"deepEquals": {
+					"method": "GET",
+					"query": {
+						"base": "not existence"
+					},
+					"path": "/customer/cif"
+				}
+			}],
+			"responses": [{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"X-Content-Type-Options": "nosniff",
+						"X-XSS-Protection": "1; mode=block",
+						"Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+						"Pragma": "no-cache",
+						"Expires": "0",
+						"X-Frame-Options": "DENY",
+						"Date": "Sun, 14 Apr 2019 14:44:10 GMT",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Transfer-Encoding": "chunked",
+						"Connection": "close"
+					},
+					"body": [],
+					"_mode": "text",
+					"_proxyResponseTime": 117
+				},
+				"_behaviors": {
+					"wait": 117
+				}
+			}]
+		}
+	]
+}

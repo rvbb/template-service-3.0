@@ -13,7 +13,8 @@ import io.swagger.v3.oas.models.info.License;
 @Configuration
 public class OpenApiConfig {
     @Bean
-    public OpenAPI templateServiceOpenAPI(@Value("${app.descr}") String appDescription, @Value("${app.ver}") String appVersion) {
+    public OpenAPI templateServiceOpenAPI(@Value("${app.descr}") String appDescription,
+                                          @Value("${app.ver}") String appVersion) {
         return new OpenAPI()
                 .info(new Info().title(appDescription)
                                 .description(appDescription)
@@ -27,8 +28,8 @@ public class OpenApiConfig {
     @Bean
     public GroupedOpenApi financeApi() {
         return GroupedOpenApi.builder()
-                             .group("finance")
-                             .pathsToMatch("/**")
+                             .group("finance-service")
+                             .pathsToMatch("/finance/**")
                              .build();
     }
 

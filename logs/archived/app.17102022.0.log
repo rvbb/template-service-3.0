@@ -1,6 +1,0 @@
-2022-10-17 22:52:49,833 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 17.0.4.1 on VN_LV00202-N with PID 84437 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
-2022-10-17 22:52:49,834 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M4, Spring v6.0.0-M5
-2022-10-17 22:52:49,834 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-10-17 23:00:00,155 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 19 on VN_LV00202-N with PID 85541 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
-2022-10-17 23:00:00,156 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M4, Spring v6.0.0-M5
-2022-10-17 23:00:00,157 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"

@@ -9,8 +9,8 @@ import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoInput;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
 import com.rvbb.food.template.entity.FinanceInfoEntity;
-import com.rvbb.food.template.repository.IFinanceInfoRepository;
-import com.rvbb.food.template.repository.IFinanceInfoXpanRepository;
+import com.rvbb.food.template.repository.FinanceInfoRepository;
+import com.rvbb.food.template.repository.FinanceInfoXpanRepository;
 import com.rvbb.food.template.service.mapper.FinanceInfoMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,14 +32,14 @@ import java.util.Map;
 @Repository
 @AllArgsConstructor
 @SuppressWarnings(value = "uncheckd")
-public class FinanceInfoXpanRepositoryImpl implements IFinanceInfoXpanRepository {
+public class FinanceInfoXpanRepositoryImpl implements FinanceInfoXpanRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     private final ApplicationConfig applicationConfig;
 
-    private final IFinanceInfoRepository financeInfoRepository;
+    private final FinanceInfoRepository financeInfoRepository;
 
     @Transactional
     @Override

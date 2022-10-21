@@ -32,7 +32,7 @@ public class RestTemplateConfig {
         ClientHttpRequestFactory factory = new BufferingClientHttpRequestFactory(factoryOrigin);
 
         RestTemplate restTemplate = new RestTemplate(factory);
-        restTemplate.setInterceptors(Collections.singletonList(new InOutLogInterceptorConfig()));
+        restTemplate.setInterceptors(Collections.singletonList(new IOLogInterceptorConfig()));
         return restTemplate;
     }
 
@@ -46,7 +46,7 @@ public class RestTemplateConfig {
 
         RestTemplate restTemplate = new RestTemplate(factory);
         restTemplate.setInterceptors(Collections.singletonList(
-                new InOutLogInterceptorConfig()));
+                new IOLogInterceptorConfig()));
         return restTemplate;
     }
 

@@ -17,6 +17,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rvbb.food.template.exception.AdapterBadRequestException;
+import com.rvbb.food.template.service.adapter.CifClient;
 
 import feign.Logger;
 import feign.codec.Decoder;
@@ -27,7 +28,7 @@ import okhttp3.OkHttpClient;
 
 @Slf4j
 @Configuration
-@EnableFeignClients
+@EnableFeignClients(clients = CifClient.class)
 public class FeignConfig {
     @Bean
     Logger.Level feignLoggerLevel() {
