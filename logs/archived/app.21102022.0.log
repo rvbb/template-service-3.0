@@ -1,0 +1,610 @@
+2022-10-21 14:46:16,210 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 62817 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:46:16,210 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:46:16,211 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:46:19,510 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 62817 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:46:19,511 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:46:19,511 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:46:21,089 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 62817 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:46:21,090 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:46:21,090 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:46:22,654 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 62817 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:46:22,655 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:46:22,655 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:51:04,754 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 63341 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:51:04,755 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:51:04,756 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:51:10,269 INFO com.rvbb.food.template.CifServiceTest [Test worker] Started CifServiceTest in 5.95 seconds (process running for 7.25)
+2022-10-21 14:51:10,435 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:51:10,444 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=not%20existence HTTP/1.1
+2022-10-21 14:51:10,445 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:51:10,445 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:51:10,584 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (137ms)
+2022-10-21 14:51:10,584 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:10,584 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:51:10,585 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:10,585 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:10,585 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:51:10,586 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:51:10,586 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:51:10,586 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:51:10,586 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:51:10,587 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:10,587 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:51:10,588 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] []
+2022-10-21 14:51:10,589 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (2-byte body)
+2022-10-21 14:51:10,660 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:51:10,661 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=Users HTTP/1.1
+2022-10-21 14:51:10,662 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:51:10,662 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:51:10,795 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (132ms)
+2022-10-21 14:51:10,796 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:10,796 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:51:10,796 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:10,797 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:10,797 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:51:10,797 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:51:10,798 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:51:10,798 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:51:10,798 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:51:10,798 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:10,798 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:51:10,799 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] [
+    {
+        "_id": "604ee8b4a91a422bfea0dae7",
+        "description": "Using credit and loan",
+        "base": "User",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    },
+    {
+        "_id": "604ee8b4a91a422bfea0dae8",
+        "description": "Using credit and loan 2",
+        "base": "User 2",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    }
+]
+2022-10-21 14:51:10,799 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (474-byte body)
+2022-10-21 14:51:10,805 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:51:10,826 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] ---> POST http://localhost:20210/customer/cif HTTP/1.1
+2022-10-21 14:51:10,827 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Accept: application/json
+2022-10-21 14:51:10,827 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Content-Length: 152
+2022-10-21 14:51:10,831 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Content-Type: application/json
+2022-10-21 14:51:10,831 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] 
+2022-10-21 14:51:10,831 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] {"description":"UT create cif","base":"Test","strict":true,"idInjection":false,"bankList":[{"id":0,"bankName":"bankname Test","type":1,"created":null}]}
+2022-10-21 14:51:10,832 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] ---> END HTTP (152-byte body)
+2022-10-21 14:51:10,959 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] <--- HTTP/1.1 201 Created (127ms)
+2022-10-21 14:51:10,960 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:10,960 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] connection: close
+2022-10-21 14:51:10,960 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:10,960 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:10,961 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] expires: 0
+2022-10-21 14:51:10,961 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] pragma: no-cache
+2022-10-21 14:51:10,961 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] transfer-encoding: chunked
+2022-10-21 14:51:10,961 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-content-type-options: nosniff
+2022-10-21 14:51:10,961 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-frame-options: DENY
+2022-10-21 14:51:10,962 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:10,962 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] 
+2022-10-21 14:51:10,962 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] {
+    "name": "Customer c",
+    "description": "UT create cif",
+    "base": "Test",
+    "idInjection": false,
+    "strict": true,
+    "banklist": [
+        {
+            "bankName": "bankname Test",
+            "type": 1
+        }
+    ]
+}
+2022-10-21 14:51:10,963 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] <--- END HTTP (238-byte body)
+2022-10-21 14:51:10,969 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:51:10,970 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=VCB HTTP/1.1
+2022-10-21 14:51:10,970 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:51:10,970 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:51:11,101 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (130ms)
+2022-10-21 14:51:11,101 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:51:11,102 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:51:11,102 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:51:11,102 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:51:11,102 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:51:11,102 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:51:11,103 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:51:11,103 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:51:11,103 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:51:11,103 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:51:11,103 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:51:11,103 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] [
+    {
+        "_id": "604ee8b4a91a422bfea0dae9",
+        "description": "VCB Test get once",
+        "base": "VCB",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    }
+]
+2022-10-21 14:51:11,104 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (231-byte body)
+2022-10-21 14:55:38,727 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 64179 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:55:38,728 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:55:38,730 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:55:43,271 INFO com.rvbb.food.template.CifServiceTest [Test worker] Started CifServiceTest in 4.98 seconds (process running for 6.346)
+2022-10-21 14:55:43,414 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:55:43,421 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=not%20existence HTTP/1.1
+2022-10-21 14:55:43,421 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:55:43,422 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:55:43,562 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (139ms)
+2022-10-21 14:55:43,562 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:55:43,562 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:55:43,562 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:55:43,563 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:55:43,563 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:55:43,563 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:55:43,563 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:55:43,564 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:55:43,564 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:55:43,564 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:55:43,564 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:55:43,567 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] []
+2022-10-21 14:55:43,568 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (2-byte body)
+2022-10-21 14:55:43,640 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:55:43,641 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=Users HTTP/1.1
+2022-10-21 14:55:43,641 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:55:43,641 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:55:43,774 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (132ms)
+2022-10-21 14:55:43,775 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:55:43,775 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:55:43,775 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:55:43,776 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:55:43,776 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:55:43,776 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:55:43,777 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:55:43,777 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:55:43,777 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:55:43,777 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:55:43,778 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:55:43,778 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] [
+    {
+        "_id": "604ee8b4a91a422bfea0dae7",
+        "description": "Using credit and loan",
+        "base": "User",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    },
+    {
+        "_id": "604ee8b4a91a422bfea0dae8",
+        "description": "Using credit and loan 2",
+        "base": "User 2",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    }
+]
+2022-10-21 14:55:43,779 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (474-byte body)
+2022-10-21 14:55:43,785 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:55:43,806 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] ---> POST http://localhost:20210/customer/cif HTTP/1.1
+2022-10-21 14:55:43,807 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Accept: application/json
+2022-10-21 14:55:43,807 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Content-Length: 152
+2022-10-21 14:55:43,807 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Content-Type: application/json
+2022-10-21 14:55:43,807 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] 
+2022-10-21 14:55:43,808 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] {"description":"UT create cif","base":"Test","strict":true,"idInjection":false,"bankList":[{"id":0,"bankName":"bankname Test","type":1,"created":null}]}
+2022-10-21 14:55:43,808 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] ---> END HTTP (152-byte body)
+2022-10-21 14:55:43,946 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] <--- HTTP/1.1 201 Created (137ms)
+2022-10-21 14:55:43,946 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:55:43,947 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] connection: close
+2022-10-21 14:55:43,947 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:55:43,947 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:55:43,948 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] expires: 0
+2022-10-21 14:55:43,948 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] pragma: no-cache
+2022-10-21 14:55:43,948 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] transfer-encoding: chunked
+2022-10-21 14:55:43,948 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-content-type-options: nosniff
+2022-10-21 14:55:43,949 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-frame-options: DENY
+2022-10-21 14:55:43,949 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-xss-protection: 1; mode=block
+2022-10-21 14:55:43,949 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] 
+2022-10-21 14:55:43,950 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] {
+    "name": "Customer c",
+    "description": "UT create cif",
+    "base": "Test",
+    "idInjection": false,
+    "strict": true,
+    "banklist": [
+        {
+            "bankName": "bankname Test",
+            "type": 1
+        }
+    ]
+}
+2022-10-21 14:55:43,950 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] <--- END HTTP (238-byte body)
+2022-10-21 14:55:43,955 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:55:43,956 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=VCB HTTP/1.1
+2022-10-21 14:55:43,956 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:55:43,956 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:55:44,093 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (136ms)
+2022-10-21 14:55:44,094 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:55:44,094 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:55:44,094 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:55:44,095 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:55:44,095 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:55:44,095 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:55:44,096 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:55:44,096 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:55:44,096 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:55:44,097 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:55:44,097 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:55:44,097 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] [
+    {
+        "_id": "604ee8b4a91a422bfea0dae9",
+        "description": "VCB Test get once",
+        "base": "VCB",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    }
+]
+2022-10-21 14:55:44,098 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (231-byte body)
+2022-10-21 14:56:08,024 INFO com.rvbb.food.template.CifServiceTest [Test worker] Starting CifServiceTest using Java 18.0.2 on VN_LV00202-N with PID 64498 (started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:56:08,024 DEBUG com.rvbb.food.template.CifServiceTest [Test worker] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:56:08,025 INFO com.rvbb.food.template.CifServiceTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:56:12,512 INFO com.rvbb.food.template.CifServiceTest [Test worker] Started CifServiceTest in 4.874 seconds (process running for 5.992)
+2022-10-21 14:56:12,649 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:56:12,657 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=not%20existence HTTP/1.1
+2022-10-21 14:56:12,657 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:56:12,657 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:56:12,790 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (132ms)
+2022-10-21 14:56:12,790 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:56:12,791 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:56:12,791 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:56:12,791 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:56:12,791 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:56:12,791 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:56:12,792 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:56:12,792 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:56:12,792 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:56:12,792 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:56:12,792 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:56:12,794 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] []
+2022-10-21 14:56:12,795 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (2-byte body)
+2022-10-21 14:56:12,859 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:56:12,859 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=Users HTTP/1.1
+2022-10-21 14:56:12,860 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:56:12,860 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:56:12,987 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (127ms)
+2022-10-21 14:56:12,988 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:56:12,988 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:56:12,989 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:56:12,989 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:56:12,989 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:56:12,989 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:56:12,990 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:56:12,990 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:56:12,990 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:56:12,990 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:56:12,991 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:56:12,991 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] [
+    {
+        "_id": "604ee8b4a91a422bfea0dae7",
+        "description": "Using credit and loan",
+        "base": "User",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    },
+    {
+        "_id": "604ee8b4a91a422bfea0dae8",
+        "description": "Using credit and loan 2",
+        "base": "User 2",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    }
+]
+2022-10-21 14:56:12,992 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (474-byte body)
+2022-10-21 14:56:12,998 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:56:13,020 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] ---> POST http://localhost:20210/customer/cif HTTP/1.1
+2022-10-21 14:56:13,020 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Accept: application/json
+2022-10-21 14:56:13,020 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Content-Length: 152
+2022-10-21 14:56:13,021 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] Content-Type: application/json
+2022-10-21 14:56:13,021 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] 
+2022-10-21 14:56:13,021 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] {"description":"UT create cif","base":"Test","strict":true,"idInjection":false,"bankList":[{"id":0,"bankName":"bankname Test","type":1,"created":null}]}
+2022-10-21 14:56:13,021 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] ---> END HTTP (152-byte body)
+2022-10-21 14:56:13,148 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] <--- HTTP/1.1 201 Created (126ms)
+2022-10-21 14:56:13,149 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:56:13,149 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] connection: close
+2022-10-21 14:56:13,150 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:56:13,150 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:56:13,150 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] expires: 0
+2022-10-21 14:56:13,150 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] pragma: no-cache
+2022-10-21 14:56:13,151 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] transfer-encoding: chunked
+2022-10-21 14:56:13,151 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-content-type-options: nosniff
+2022-10-21 14:56:13,151 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-frame-options: DENY
+2022-10-21 14:56:13,151 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] x-xss-protection: 1; mode=block
+2022-10-21 14:56:13,152 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] 
+2022-10-21 14:56:13,152 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] {
+    "name": "Customer c",
+    "description": "UT create cif",
+    "base": "Test",
+    "idInjection": false,
+    "strict": true,
+    "banklist": [
+        {
+            "bankName": "bankname Test",
+            "type": 1
+        }
+    ]
+}
+2022-10-21 14:56:13,152 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#createNewCif] <--- END HTTP (238-byte body)
+2022-10-21 14:56:13,157 INFO com.rvbb.food.template.config.LoggerConfig [Test worker] API = http://localhost:80
+2022-10-21 14:56:13,158 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> GET http://localhost:20210/customer/cif?base=VCB HTTP/1.1
+2022-10-21 14:56:13,158 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] Content-Type: application/json
+2022-10-21 14:56:13,158 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] ---> END HTTP (0-byte body)
+2022-10-21 14:56:13,284 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- HTTP/1.1 200 OK (125ms)
+2022-10-21 14:56:13,285 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2022-10-21 14:56:13,285 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] connection: close
+2022-10-21 14:56:13,285 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] content-type: application/json;charset=UTF-8
+2022-10-21 14:56:13,285 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] date: Sun, 14 Apr 2019 14:44:10 GMT
+2022-10-21 14:56:13,286 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] expires: 0
+2022-10-21 14:56:13,286 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] pragma: no-cache
+2022-10-21 14:56:13,286 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] transfer-encoding: chunked
+2022-10-21 14:56:13,286 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-content-type-options: nosniff
+2022-10-21 14:56:13,286 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-frame-options: DENY
+2022-10-21 14:56:13,286 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] x-xss-protection: 1; mode=block
+2022-10-21 14:56:13,287 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] 
+2022-10-21 14:56:13,287 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] [
+    {
+        "_id": "604ee8b4a91a422bfea0dae9",
+        "description": "VCB Test get once",
+        "base": "VCB",
+        "strict": true,
+        "idInjection": false,
+        "_class": "webflux.demo.customer.model.Cif"
+    }
+]
+2022-10-21 14:56:13,287 DEBUG com.rvbb.food.template.service.adapter.CifClient [Test worker] [CifClient#getCif] <--- END HTTP (231-byte body)
+2022-10-21 14:56:38,209 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 18.0.2 on VN_LV00202-N with PID 65164 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 14:56:38,209 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 14:56:38,209 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 14:56:41,473 INFO com.rvbb.food.template.TemplateApplication [main] Started TemplateApplication in 3.527 seconds (process running for 4.453)
+2022-10-21 15:09:26,886 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 18.0.2 on VN_LV00202-N with PID 74270 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 15:09:26,887 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 15:09:26,887 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 15:09:30,578 INFO com.rvbb.food.template.TemplateApplication [main] Started TemplateApplication in 4.046 seconds (process running for 4.796)
+2022-10-21 15:40:02,331 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 18.0.2 on VN_LV00202-N with PID 88857 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 15:40:02,332 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 15:40:02,332 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 15:40:06,066 INFO com.rvbb.food.template.TemplateApplication [main] Started TemplateApplication in 4.101 seconds (process running for 4.826)
+2022-10-21 15:43:54,467 INFO com.rvbb.food.template.config.LoggerConfig [qtp2100297853-25] API = http://localhost:8080/food/food/finance/api-docs
+2022-10-21 15:43:54,473 INFO com.rvbb.food.template.config.LoggerConfig [qtp2100297853-25] API = http://localhost:8080/food/food/finance/api-docs
+2022-10-21 15:43:54,629 ERROR com.rvbb.food.template.config.LoggerConfig [qtp2100297853-25] Exception in process, detail:
+jakarta.persistence.EntityNotFoundException: Not found finance information with uuid : api-docs
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl.lambda$getByUuid$0(FinanceInfoServiceImpl.java:109)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl.getByUuid(FinanceInfoServiceImpl.java:108)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl.get(FinanceInfoServiceImpl.java:48)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl$$SpringCGLIB$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl$$SpringCGLIB$$0.get(<generated>)
+	at com.rvbb.food.template.controller.impl.FinanceInfoControllerImpl.get(FinanceInfoControllerImpl.java:52)
+	at com.rvbb.food.template.controller.impl.FinanceInfoControllerImpl$$SpringCGLIB$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.rvbb.food.template.controller.impl.FinanceInfoControllerImpl$$SpringCGLIB$$0.get(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:898)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:810)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:968)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-10-21 15:43:54,630 ERROR com.rvbb.food.template.config.LoggerConfig [qtp2100297853-25] Exception in process, detail:
+jakarta.persistence.EntityNotFoundException: Not found finance information with uuid : api-docs
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl.lambda$getByUuid$0(FinanceInfoServiceImpl.java:109)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl.getByUuid(FinanceInfoServiceImpl.java:108)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl.get(FinanceInfoServiceImpl.java:48)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl$$SpringCGLIB$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.rvbb.food.template.service.impl.FinanceInfoServiceImpl$$SpringCGLIB$$0.get(<generated>)
+	at com.rvbb.food.template.controller.impl.FinanceInfoControllerImpl.get(FinanceInfoControllerImpl.java:52)
+	at com.rvbb.food.template.controller.impl.FinanceInfoControllerImpl$$SpringCGLIB$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.rvbb.food.template.controller.impl.FinanceInfoControllerImpl$$SpringCGLIB$$0.get(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:898)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:810)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:968)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:170)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-10-21 15:54:34,070 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 18.0.2 on VN_LV00202-N with PID 91530 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 15:54:34,071 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 15:54:34,071 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 15:54:37,941 INFO com.rvbb.food.template.TemplateApplication [main] Started TemplateApplication in 4.265 seconds (process running for 5.117)
+2022-10-21 15:56:50,401 INFO com.rvbb.food.template.TemplateApplication [main] Starting TemplateApplication using Java 18.0.2 on VN_LV00202-N with PID 91724 (/Users/nguyenvanhoang/code/learn/template-service-3.0/build/classes/java/main started by nguyenvanhoang in /Users/nguyenvanhoang/code/learn/template-service-3.0)
+2022-10-21 15:56:50,401 DEBUG com.rvbb.food.template.TemplateApplication [main] Running with Spring Boot v3.0.0-M5, Spring v6.0.0-M6
+2022-10-21 15:56:50,402 INFO com.rvbb.food.template.TemplateApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-10-21 15:56:54,341 INFO com.rvbb.food.template.TemplateApplication [main] Started TemplateApplication in 4.339 seconds (process running for 5.079)
