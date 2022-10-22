@@ -26,7 +26,7 @@
 
 ### Unit Test
 	> CRUD API docs:  
-	    Browse APIs via swagger: http://localhost:8080/api-docs
+	    Browse APIs via swagger: http://localhost:8080/food/api-docs
     > How to test CIF APIs (present use OpenFeign):
         1. Use Mountebank
                 docker run -p 2525:2525 -d jkris/mountebank --configfile "$PWD/data/cif_apis.ejs" --allowInjection

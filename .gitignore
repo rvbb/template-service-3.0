@@ -1,7 +1,7 @@
 logs/*
 build/*
-.idea
-.gradle
+.idea/*
+.gradle/*
 gradle/*
 .git
 

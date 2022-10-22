@@ -28,7 +28,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 
-@Tag(name = "Loan financial information API")
+@Tag(name = "crud", description = "Loan financial information API")
 @RequestMapping("finance")
 public interface FinanceInfoController {
     @Operation(summary = "Create",
