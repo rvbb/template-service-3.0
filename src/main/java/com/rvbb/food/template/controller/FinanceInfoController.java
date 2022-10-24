@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.rvbb.food.template.controller.handler.Error;
 import com.rvbb.food.template.dto.Response;
@@ -29,6 +30,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 
 @Tag(name = "crud", description = "Loan financial information API")
+@RestController
 @RequestMapping("finance")
 public interface FinanceInfoController {
     @Operation(summary = "Create",
