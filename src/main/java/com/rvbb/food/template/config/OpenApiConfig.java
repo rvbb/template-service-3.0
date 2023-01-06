@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -18,8 +15,7 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 
 @Configuration
-@EnableWebMvc
-public class OpenApiConfig implements WebMvcConfigurer {
+public class OpenApiConfig {
 
     static {
         SpringDocUtils.getConfig().replaceParameterObjectWithClass(Pageable.class, Pageable.class)
@@ -39,27 +35,19 @@ public class OpenApiConfig implements WebMvcConfigurer {
                                       .url("https://code.rvbb.com/policy"));
     }
 
-//    @Bean
-//    public GroupedOpenApi financeApi() {
-//        return GroupedOpenApi.builder()
-//                             .group("finance-service")
-//                             .pathsToMatch("/finance/**")
-//                             .build();
-//    }
-//
-//    @Bean
-//    public GroupedOpenApi testApi() {
-//        return GroupedOpenApi.builder()
-//                             .group("test-service")
-//                             .pathsToMatch("/test/**")
-//                             .build();
-//    }
-//
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("swagger-ui.html")
-//                .addResourceLocations("classpath:/META-INF/resources/");
-//        registry.addResourceHandler("/webjars/**")
-//                .addResourceLocations("classpath:/META-INF/resources/webjars/");
-//    }
+    @Bean
+    public GroupedOpenApi financeApi() {
+        return GroupedOpenApi.builder()
+                             .group("finance-service")
+                             .pathsToMatch("/finance/**")
+                             .build();
+    }
+
+    @Bean
+    public GroupedOpenApi testApi() {
+        return GroupedOpenApi.builder()
+                             .group("test-service")
+                             .pathsToMatch("/test/**")
+                             .build();
+    }
 }
