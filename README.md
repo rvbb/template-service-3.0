@@ -23,7 +23,7 @@
 
 ### Configuration & data
 	+ [configuration] use K8s ConfigMap
-
+    
 ### Unit Test
 	> How to test CRUD API docs:  
 	    1. Start Postgres: docker run --name local-postgres --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Devdev123 -e PGDATA=/var/lib/postgresql/data/pgdata -v /tmp:/var/lib/postgresql/data -p 5432:5432 -it postgres:14.1-alpine
@@ -37,3 +37,4 @@
         3. Test
                 a, use IDEA + Gradle tool
                 b, user command ./gradlew test                        
+    > Open API: http://localhost:8080/swagger-ui/index.html | http://localhost:8080/api-docs

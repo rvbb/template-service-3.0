@@ -2,8 +2,6 @@
 server:
   max-http-header-size: 600000
   port: ${PORT:8080}
-  servlet:
-    context-path: /food
 
 # Spring
 spring:
@@ -34,20 +32,10 @@ app:
   ver: '1.0.0'
 
 springdoc:
-  packagesToScan: com.rvbb.food.template.controller
   api-docs:
-    path: /apis
-  use-management-port: true
-  show-actuator: true
-  swagger-ui:
-#    operationsSorter: method
-    path: /swagger
+    path: /api-docs
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: openapi, swagger-ui, api-docs, apis
   server:
     port: 9090
 
