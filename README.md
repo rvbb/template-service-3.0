@@ -13,7 +13,7 @@
     > Spring Boot 3.0
 	> PostgreSQL
 	> Spring AOP
-	> Spring Data with 
+	> Spring Data with e
 	> OpenAPI (former SwaggerUI) - current not work 24 Oct 2022
 	> Spring Cloud OpenFeign & OkHttp3
     > Gradle 7.5 + JDK 18 
@@ -23,11 +23,17 @@
 
 ### Configuration & data
 	+ [configuration] use K8s ConfigMap
+
+### K8s Deployment
+    1. Deploy postgres:14.1-alpine as a service
+    2. Deploy template service:
+        + docker build -t template-service .
+        + docker push local
     
 ### Unit Test
 	> How to test CRUD API docs:  
-	    1. Start Postgres: docker run --name local-postgres --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Devdev123 -e PGDATA=/var/lib/postgresql/data/pgdata -v /tmp:/var/lib/postgresql/data -p 5432:5432 -it postgres:14.1-alpine
-        2. Browse APIs via swagger: http://localhost:8080/food/api-docs
+	    1. Start Postgres: docker run --hostname pghost --name pgdb --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Devdev123 -e PGDATA=/var/lib/postgresql/data/pgdata -e DB_PORT=5432 -v /tmp:/var/lib/postgresql/data -it postgres:14.1-alpine
+        2. Browse APIs via swagger: http://localhost:8080/api-docs
     > How to test CIF APIs (present use OpenFeign):
         1. Use Mountebank
                 docker run -p 2525:2525 -d jkris/mountebank --configfile "$PWD/data/cif_apis.ejs" --allowInjection
@@ -38,3 +44,8 @@
                 a, use IDEA + Gradle tool
                 b, user command ./gradlew test                        
     > Open API: http://localhost:8080/swagger-ui/index.html | http://localhost:8080/api-docs
+    > How to Dockerize?
+        1. docker build -t template-service .
+        2. docker compose up
+    
+    

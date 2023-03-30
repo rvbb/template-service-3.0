@@ -8,9 +8,9 @@ spring:
   application:
     name: template-service-3.0
   datasource:
+    username: ${DB_USER:postgres}
     password: ${DB_PWD:Devdev123}
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_DATABASE:postgres}?useSSL=false
-    username: ${DB_USER:postgres}
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     hibernate:

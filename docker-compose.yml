@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: pgdb
+    image: postgres:14.1-alpine
+    hostname: pgdb_host
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=Devdev123'
+    ports:
+      - "5432:5432"
+
+  template-service-3.0:
+    image: "template-service"
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=local
