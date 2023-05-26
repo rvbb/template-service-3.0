@@ -23,7 +23,6 @@ spring:
   main:
     banner-mode: off
     allow-bean-definition-overriding: true
-    #this fix FeignClientSpecification could not be registered compiling
 
 #Open API v3
 app:
@@ -41,6 +40,7 @@ management:
 # Test OpenFeign
 cif:
   apis: http://localhost:20210/customer/cif
+
 feign:
   client:
     config:

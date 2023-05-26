@@ -49,7 +49,7 @@ public class FeignConfig {
                 try {
                     body = IOUtils.toString(response.body().asReader(StandardCharsets.UTF_8));
                 } catch (Exception ignored) {
-                    log.debug("parser 400 bad request fail, cause by:[{}]", ignored);
+                    log.debug("parser 400 bad request fail, cause by: ", ignored);
                 }
                 final HttpHeaders httpHeaders = new HttpHeaders();
                 response.headers().forEach((k, v) -> httpHeaders.add(k + ".feign", StringUtils.join(v, ",")));
@@ -58,21 +58,5 @@ public class FeignConfig {
                 return new RuntimeException("Response Code " + status);
             }
         };
-    }
-
-//    @Bean
-    public Decoder decoder() {
-        HttpMessageConverter jacksonConverter = new MappingJackson2HttpMessageConverter(makeConverter());
-        ObjectFactory<HttpMessageConverters> objectFactory = () -> new HttpMessageConverters(jacksonConverter);
-        return new ResponseEntityDecoder(new SpringDecoder(objectFactory));
-    }
-
-    private ObjectMapper makeConverter() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper;
-    }
-
-    public Encoder encoder() {
-        return null;
     }
 }

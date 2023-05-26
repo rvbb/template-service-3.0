@@ -13,7 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpStatus;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 @Slf4j
@@ -43,7 +43,7 @@ public class FinanceInfoValidator {
             Double.valueOf(request.getPreTaxIncome());
             Double.valueOf(request.getExpense());
         } catch (NumberFormatException e) {
-            throw new BizLogicException("The 'expense' or/and 'preTaxIncome' field must be numeric and length MUST <= 15", HttpStatus.SC_UNPROCESSABLE_ENTITY);
+            throw new BizLogicException("The 'expense' or/and 'preTaxIncome' field must be numeric and length MUST <= 15", HttpStatus.BAD_REQUEST.value());
         }
     }
 
