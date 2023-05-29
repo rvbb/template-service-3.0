@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  mountebank:
+    container_name: mountebank
+    image: jkris/mountebank:latest
+    volumes:
+      - ./imposters:/imposters
+    ports:
+      - 2525:2525
+      - 8090:8090
+    command: --configfile $PWD/src/main/resources/static/cif_apis.ejs --allowInjection

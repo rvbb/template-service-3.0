@@ -40,7 +40,7 @@ management:
 
 # Test OpenFeign
 cif:
-  apis: http://localhost:20210/customer/cif
+  apis: http://localhost:20231/customer/cif
 feign:
   client:
     config:

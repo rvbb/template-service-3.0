@@ -8,6 +8,8 @@ import org.springframework.validation.ObjectError;
 
 import jakarta.validation.ConstraintViolation;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -16,7 +18,7 @@ import java.util.Set;
 @Data
 public class Error {
     @Builder.Default
-    private LocalDateTime timestamp = LocalDateTime.now();
+    private long timestamp =  ZonedDateTime.of(LocalDateTime.now(), ZoneId.systemDefault()).toInstant().toEpochMilli();
     private int code;
     @Builder.Default
     private String message = "";

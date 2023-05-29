@@ -29,7 +29,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 
-@Tag(name = "crud", description = "Loan financial information API")
+@Tag(name = "Loan Services(CRUD)", description = "Loan financial information API")
 @RestController
 @RequestMapping("finance")
 public interface FinanceInfoController {
@@ -49,7 +49,7 @@ public interface FinanceInfoController {
     @PostMapping
     Response<FinanceInfoRes> create(@Valid @RequestBody FinanceInfoInput request);
 
-    @Operation(description = "Get last",
+    @Operation(summary = "Get last",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Success",
                             content = @Content(schema = @Schema(implementation = FinanceInfoRes.class))),
@@ -65,7 +65,7 @@ public interface FinanceInfoController {
     @GetMapping("/last")
     Response<FinanceInfoRes> getLast();
 
-    @Operation(description = "Update",
+    @Operation(summary = "Update",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Success",
                             content = @Content(schema = @Schema(implementation = FinanceInfoRes.class))),
@@ -81,7 +81,7 @@ public interface FinanceInfoController {
     @PutMapping("/{uuid}")
     Response<FinanceInfoRes> update(@PathVariable String uuid, @Valid @RequestBody FinanceInfoInput request);
 
-    @Operation(description = "Read One",
+    @Operation(summary = "Read One",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Success",
                             content = @Content(schema = @Schema(implementation = FinanceInfoRes.class))),
@@ -97,7 +97,7 @@ public interface FinanceInfoController {
     @GetMapping("/{uuid}")
     Response<FinanceInfoRes> get(@PathVariable String uuid);
 
-    @Operation(description = "List",
+    @Operation(summary = "List",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Success",
                             content = @Content(array = @ArraySchema(uniqueItems = false, schema = @Schema(implementation = FinanceInfoInput.class)))),
@@ -113,7 +113,7 @@ public interface FinanceInfoController {
     @GetMapping("/list")
     Response<List<FinanceInfoRes>> list();
 
-    @Operation(description = "Delete One",
+    @Operation(summary = "Delete One",
     responses = {
         @ApiResponse(responseCode = "200", description = "Success",
                 content = @Content(schema = @Schema(implementation = FinanceInfoInput.class))),
@@ -129,7 +129,7 @@ public interface FinanceInfoController {
     @DeleteMapping("/{uuid}")
     Response<FinanceInfoRes> del(@PathVariable String uuid);
 
-    @Operation(description = "Filter",responses = {
+    @Operation(summary = "Filter",responses = {
             @ApiResponse(responseCode = "200", description = "Success",
                     content = @Content(schema = @Schema(implementation = FinanceInfoInput.class))),
             @ApiResponse(responseCode = "400", description = "Bad request",
@@ -144,7 +144,7 @@ public interface FinanceInfoController {
     @PostMapping("/filter")
     Response<Page<FinanceInfoRes>> filter(@Valid @RequestBody FinanceInfoFilterInput filter);
 
-    @Operation(description = "Filter with Pageable",responses = {
+    @Operation(summary = "Filter with Pageable",responses = {
             @ApiResponse(responseCode = "200", description = "Success",
                     content = @Content(array = @ArraySchema(uniqueItems = false, schema = @Schema(implementation = FinanceInfoRes.class)))),
             @ApiResponse(responseCode = "400", description = "Bad request",

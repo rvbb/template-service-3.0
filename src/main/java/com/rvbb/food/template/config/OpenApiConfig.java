@@ -44,10 +44,10 @@ public class OpenApiConfig {
     }
 
     @Bean
-    public GroupedOpenApi testApi() {
+    public GroupedOpenApi cifOpenFeignApi() {
         return GroupedOpenApi.builder()
-                             .group("test-service")
-                             .pathsToMatch("/test/**")
-                             .build();
+                .group("cif-service")
+                .pathsToMatch("/cif/**")
+                .build();
     }
 }
