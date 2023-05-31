@@ -45,8 +45,7 @@ public class JsonUtils {
             length = json.length;
             return MAPPER.readValue(json, type);
         } catch (Exception e) {
-            log.error("Unable to parse json from a array of bytes(length={}) to a object={}. Cause by ={} ", length,
-                    type, e);
+            log.error("Unable to parse json from a array of bytes: length={}, cause by={}", length, e.getMessage());
             return null;
         }
     }
@@ -59,7 +58,7 @@ public class JsonUtils {
         return objectMapper.readValue(json, tClass);
     }
 
-    public static <T> T map2Object(Map<? extends String, ? extends String> map, TypeReference<T> o) {
+    public static <T> T map2Object(Map<String, String> map, TypeReference<T> o) {
         return objectMapper.convertValue(map, o);
     }
 

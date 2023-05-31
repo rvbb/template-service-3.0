@@ -1,29 +1,30 @@
 package com.rvbb.food.template.service.impl;
 
 import com.rvbb.food.template.common.constant.ErrorCode;
+import com.rvbb.food.template.common.constant.FinanceInfoStatus;
+import com.rvbb.food.template.common.util.CommonUtil;
 import com.rvbb.food.template.common.util.LogIt;
+import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoInput;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
 import com.rvbb.food.template.entity.FinanceInfoEntity;
-import com.rvbb.food.template.repository.FinanceInfoRepository;
-import com.rvbb.food.template.service.mapper.FinanceInfoMapper;
-import com.rvbb.food.template.common.constant.FinanceInfoStatus;
-import com.rvbb.food.template.common.util.CommonUtil;
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
 import com.rvbb.food.template.exception.BizLogicException;
+import com.rvbb.food.template.repository.FinanceInfoRepository;
 import com.rvbb.food.template.repository.FinanceInfoXpanRepository;
-
+import com.rvbb.food.template.service.mapper.FinanceInfoMapper;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
-import jakarta.persistence.EntityNotFoundException;
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.util.*;
-
-import static java.util.stream.Collectors.toCollection;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -52,8 +53,8 @@ public class FinanceInfoServiceImpl implements com.rvbb.food.template.service.Fi
     @Override
     @LogIt
     public FinanceInfoRes create(FinanceInfoInput request) {
-        double expense = Math.floor(Double.valueOf(request.getExpense()) * 100) / 100;
-        double preTaxIncome = Math.floor(Double.valueOf(request.getPreTaxIncome()) * 100) / 100;
+        double expense = Math.floor(Double.parseDouble(request.getExpense()) * 100) / 100;
+        double preTaxIncome = Math.floor(Double.parseDouble(request.getPreTaxIncome()) * 100) / 100;
         FinanceInfoEntity newEntity = FinanceInfoEntity.builder()
                 .preTaxIncome(BigDecimal.valueOf(preTaxIncome))
                 .companyAddress(request.getCompanyAddress())
@@ -70,8 +71,8 @@ public class FinanceInfoServiceImpl implements com.rvbb.food.template.service.Fi
     @Override
     @LogIt
     public FinanceInfoRes update(String uuid, FinanceInfoInput request) {
-        double expense = Math.floor(Double.valueOf(request.getExpense()) * 100) / 100;
-        double preTaxIncome = Math.floor(Double.valueOf(request.getPreTaxIncome()) * 100) / 100;
+        double expense = Math.floor(Double.parseDouble(request.getExpense()) * 100) / 100;
+        double preTaxIncome = Math.floor(Double.parseDouble(request.getPreTaxIncome()) * 100) / 100;
         FinanceInfoEntity financeInfo = getByUuid(uuid);
         financeInfo.setPreTaxIncome(BigDecimal.valueOf(preTaxIncome));
         financeInfo.setCompanyAddress(request.getCompanyAddress());
@@ -87,13 +88,13 @@ public class FinanceInfoServiceImpl implements com.rvbb.food.template.service.Fi
     public List<FinanceInfoRes> list() {
         Collection<FinanceInfoEntity> collection = finInfoRepository.findAll();
         Collection<FinanceInfoRes> response = FinanceInfoMapper.instance.convertList(collection);
-        return response.stream().collect(toCollection(ArrayList::new));
+        return new ArrayList<>(response);
     }
 
     @Override
     @LogIt
     public FinanceInfoRes del(String uuid) {
-        FinanceInfoEntity oldEntity = null;
+        FinanceInfoEntity oldEntity;
         try {
             oldEntity = getByUuid(uuid);
         }catch (EntityNotFoundException e){
@@ -115,7 +116,7 @@ public class FinanceInfoServiceImpl implements com.rvbb.food.template.service.Fi
     }
 
     @Override
-    public Page<FinanceInfoRes> doFilter(String[] sort, String[] condition, int page, int size) {
+    public Page<FinanceInfoRes> doFilter(String[] sort, String[] condition, int page, int size) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
         return financeInfoXpanRepository.search(sort, condition, page, size);
     }
 

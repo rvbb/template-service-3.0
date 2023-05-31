@@ -6,12 +6,14 @@ import com.rvbb.food.template.common.constant.TableName;
 import com.rvbb.food.template.common.util.SqlUtils;
 import com.rvbb.food.template.config.ApplicationConfig;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoInput;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
 import com.rvbb.food.template.entity.FinanceInfoEntity;
 import com.rvbb.food.template.repository.FinanceInfoRepository;
 import com.rvbb.food.template.repository.FinanceInfoXpanRepository;
 import com.rvbb.food.template.service.mapper.FinanceInfoMapper;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
@@ -20,11 +22,7 @@ import org.springframework.data.domain.*;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.Query;
-import jakarta.transaction.Transactional;
-import java.util.Date;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
 
@@ -41,59 +39,34 @@ public class FinanceInfoXpanRepositoryImpl implements FinanceInfoXpanRepository 
 
     private final FinanceInfoRepository financeInfoRepository;
 
-    @Transactional
-    @Override
-    public boolean updateByStatus(FinanceInfoInput request, Short status) {
-        String updateQuery = "update " + TableName.FINANCE_INFO.toString().toLowerCase() + " l " +
-                "set l.company_address = ?1, " +
-                "l.company_name = ?2," +
-                "l.pre_tax_income = ?3, " +
-                "l.expense = ?4, " +
-                "l.last_update = ?5 " +
-                "where l.status = ?6";
-        Query query = entityManager.createNativeQuery(updateQuery);
-        query.setParameter(1, request.getCompanyAddress());
-        query.setParameter(2, request.getCompanyName());
-        query.setParameter(3, request.getPreTaxIncome());
-        query.setParameter(4, request.getExpense());
-        query.setParameter(5, new Date());
-        query.setParameter(6, status);
-        entityManager.flush();
-        Integer countUpdated = query.executeUpdate();
-        entityManager.clear();
-        return countUpdated > 0;
-    }
-
     public Page<FinanceInfoRes> search(FinanceInfoFilterInput filter) {
         StringBuilder search = new StringBuilder("select ");
-        search.append(FinanceInfoFieldName.ID.toString() + ",");
-        search.append(FinanceInfoFieldName.STATUS.toString() + ",");
-        search.append(FinanceInfoFieldName.LAST_UPDATE.toString() + ",");
-        search.append(FinanceInfoFieldName.COMPANY_NAME.toString() + ",");
-        search.append(FinanceInfoFieldName.COMPANY_ADDRESS.toString() + ",");
-        search.append(FinanceInfoFieldName.UUID.toString() + ",");
-        search.append(FinanceInfoFieldName.PRE_TAX_INCOME.toString() + ",");
-        search.append(FinanceInfoFieldName.EXPENSE.toString() + "");
-
-        search.append(" from " + TableName.FINANCE_INFO.toString().toLowerCase());
-
+        search.append(FinanceInfoFieldName.ID).append(",");
+        search.append(FinanceInfoFieldName.STATUS).append(",");
+        search.append(FinanceInfoFieldName.LAST_UPDATE).append(",");
+        search.append(FinanceInfoFieldName.COMPANY_NAME).append(",");
+        search.append(FinanceInfoFieldName.COMPANY_ADDRESS).append(",");
+        search.append(FinanceInfoFieldName.UUID).append(",");
+        search.append(FinanceInfoFieldName.PRE_TAX_INCOME).append(",");
+        search.append(FinanceInfoFieldName.EXPENSE);
+        search.append(" from ").append(TableName.FINANCE_INFO.toString().toLowerCase());
         StringBuilder count = new StringBuilder("select count(1) from " + TableName.FINANCE_INFO.toString().toLowerCase());
 
         StringBuilder where = new StringBuilder();
         StringBuilder sort = new StringBuilder();
 
         if (ObjectUtils.isNotEmpty(filter.getStatus())) {
-            where.append(" where " + FinanceInfoFieldName.STATUS.toString() + "=" + filter.getStatus());
+            where.append(" where ").append(FinanceInfoFieldName.STATUS).append("=").append(filter.getStatus());
         }
         if (StringUtils.isNotEmpty(filter.getCompanyName())) {
             if (where.length() < 1) {
-                where.append(" where lower(" + FinanceInfoFieldName.COMPANY_NAME.toString() + ") like '%" + filter.getCompanyName().toLowerCase() + "%'");
+                where.append(" where lower(").append(FinanceInfoFieldName.COMPANY_NAME).append(") like '%").append(filter.getCompanyName().toLowerCase()).append("%'");
             } else {
-                where.append(" and lower(" + FinanceInfoFieldName.COMPANY_NAME.toString() + ") like '%" + filter.getCompanyName().toLowerCase() + "%'");
+                where.append(" and lower(").append(FinanceInfoFieldName.COMPANY_NAME).append(") like '%").append(filter.getCompanyName().toLowerCase()).append("%'");
             }
         }
         if (where.length() > 0) {
-            search.append(where.toString());
+            search.append(where);
             count.append(where);
         }
         Query countQuery = entityManager.createNativeQuery(count.toString());
@@ -105,25 +78,17 @@ public class FinanceInfoXpanRepositoryImpl implements FinanceInfoXpanRepository 
         Map<String, String> sortFields = filter.getSorts();
 
         if (ObjectUtils.isNotEmpty(sortFields)) {
-            for (Map.Entry<String, String> entry : sortFields.entrySet()) {
-                String field = entry.getKey();
-                String orderVal = entry.getValue();
-                if (sort.length() < 1) {
-                    sort.append(field + " " + orderVal);
-                } else {
-                    sort.append("," + field + " " + orderVal);
-                }
-            }
+            buildSort(sortFields, sort);
         } else {
-            sort.append(FinanceInfoFieldName.ID.toString() + " ASC");
+            sort.append(FinanceInfoFieldName.ID).append(" ASC");
         }
         if (sort.length() > 0) {
-            search.append(" order by " + sort);
+            search.append(" order by ").append(sort);
         }
         int nextPage = pageNum + 1;
-        search.append(" limit " + pageSize);
-        search.append(" offset " + nextPage);
-        log.debug("SQL search=[{}]", search.toString());
+        search.append(" limit ").append(pageSize);
+        search.append(" offset ").append(nextPage);
+        log.debug("SQL search=[{}]", search);
         Query querySearch = entityManager.createNativeQuery(search.toString());
 
         List<Object[]> resultList = querySearch.getResultList();
@@ -138,8 +103,8 @@ public class FinanceInfoXpanRepositoryImpl implements FinanceInfoXpanRepository 
     }
 
     @Override
-    public Page<FinanceInfoRes> search(String[] sort, String[] condition, int page, int size) {
-        Page<FinanceInfoEntity> searchedList = null;
+    public Page<FinanceInfoRes> search(String[] sort, String[] condition, int page, int size) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
+        Page<FinanceInfoEntity> searchedList;
         Specification<FinanceInfoEntity> spec = SqlUtils.buildSpec(condition, FinanceInfoEntity.class);
         Sort order = SqlUtils.buildSort(sort);
         Pageable pageable = PageRequest.of(page + 1, size);
@@ -152,6 +117,18 @@ public class FinanceInfoXpanRepositoryImpl implements FinanceInfoXpanRepository 
             searchedList = financeInfoRepository.findAll(pageable);
         }
         return SqlUtils.convertPage(searchedList);
+    }
+
+    private void buildSort(Map<String, String> sortFields, StringBuilder sort) {
+        for (Map.Entry<String, String> entry : sortFields.entrySet()) {
+            String field = entry.getKey();
+            String orderVal = entry.getValue();
+            if (sort.length() < 1) {
+                sort.append(field).append(" ").append(orderVal);
+            } else {
+                sort.append(",").append(field).append(" ").append(orderVal);
+            }
+        }
     }
 
 }

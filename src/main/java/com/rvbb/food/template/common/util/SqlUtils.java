@@ -15,6 +15,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -26,36 +27,22 @@ public class SqlUtils {
 
     public static List<FinanceInfoEntity> fromResultList(List<Object[]> objectList) {
         List<FinanceInfoEntity> converted = new ArrayList<>();
-        objectList.stream().forEach(entityAsObjectArray -> {
+        objectList.forEach(entityAsObjectArray -> {
             log.info("FinanceInfoEntity as Object array=[{}]", entityAsObjectArray);
             FinanceInfoEntity entity = FinanceInfoEntity.builder()
-                    .id(Long.valueOf(String.valueOf(entityAsObjectArray[0])))
+                    .id(Long.parseLong(String.valueOf(entityAsObjectArray[0])))
                     .status(Byte.valueOf(String.valueOf(entityAsObjectArray[1])))
                     .companyName(String.valueOf(entityAsObjectArray[3]))
                     .companyAddress(String.valueOf(entityAsObjectArray[4]))
                     .uuid(String.valueOf(entityAsObjectArray[5]))
-                    .preTaxIncome(BigDecimal.valueOf(Double.valueOf(String.valueOf(entityAsObjectArray[6]))))
-                    .expense(BigDecimal.valueOf(Double.valueOf(String.valueOf(entityAsObjectArray[7]))))
+                    .preTaxIncome(BigDecimal.valueOf(Double.parseDouble(String.valueOf(entityAsObjectArray[6]))))
+                    .expense(BigDecimal.valueOf(Double.parseDouble(String.valueOf(entityAsObjectArray[7]))))
                     .build();
             entity.setLastUpdated(Timestamp.valueOf(String.valueOf(entityAsObjectArray[2])));
             converted.add(entity);
         });
 
         return converted;
-    }
-
-    public static List<Sort.Order> buildOrder(String[] sort) {
-        List<Sort.Order> orderList = new ArrayList<>();
-        if (sort[0].contains(",")) {
-            for (String sortOrder : sort) {
-                String[] fieldAndVal = sortOrder.split(",");
-                orderList.add(new Sort.Order(getSortValue(fieldAndVal[1]), fieldAndVal[0]));
-            }
-        } else {
-            orderList.add(new Sort.Order(getSortValue(sort[1]), sort[0]));
-        }
-
-        return orderList;
     }
 
     public static Sort.Direction getSortValue(String direction) {
@@ -85,24 +72,23 @@ public class SqlUtils {
      * condition=condition=equal(col1:1)&condition=greater(col2:abc)
      * need to validate before in Controller
      **/
-    public static <T> Specification buildSpec(String[] condition, T claxx) {
-        log.debug("Specification for generic class:", claxx);
+    public static <T> Specification<T> buildSpec(String[] condition, Class<T> entityClass) throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         if (ObjectUtils.isEmpty(condition)) {
             return null;
         }
         Specification<T> result = null;
-
+        T clazz = entityClass.getDeclaredConstructor().newInstance();
         for (String oneCondition : condition) {
             String operator = oneCondition.substring(0, oneCondition.indexOf("("));
             String[] fieldAndVal = oneCondition.substring(oneCondition.indexOf("(") + 1, oneCondition.indexOf(")")).split(":");
             String field = fieldAndVal[0];
             String val = fieldAndVal[1];
             String fieldPojo = "";
-            if (claxx instanceof FinanceInfoEntity) {
+            if (clazz instanceof FinanceInfoEntity) {
                 fieldPojo = FinanceInfoFieldName.getAttrByName(field);
             } else {
                 //add more compare entities
-                log.debug("There is not implementation of {} object", claxx);
+                log.debug("There is not implementation of {} object", clazz);
             }
             switch (SqlOperationName.valueOf(operator.toUpperCase())) {
                 case LIKE:

@@ -1,8 +1,10 @@
 {
 	"info": {
-		"_postman_id": "42280d1a-6e65-4859-a904-452769bbca09",
-		"name": "Template",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "8908581a-bc8d-4f52-9ba7-f6acd4bf9719",
+		"name": "Template 3.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5547199",
+		"_collection_link": "https://farmingrvbb.postman.co/workspace/Hoang-N.V~8c07d3de-6063-42f2-9903-c02729f65829/collection/5547199-8908581a-bc8d-4f52-9ba7-f6acd4bf9719?action=share&creator=5547199&source=collection_link"
 	},
 	"item": [
 		{
@@ -23,7 +25,7 @@
 					"variable": [
 						{
 							"key": "uuid",
-							"value": "fe852e26db9ea982b3bfd34640867243"
+							"value": "bba0a4f8b0fea4c076da98309a835f16"
 						}
 					]
 				}
@@ -205,7 +207,24 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Retrieve CIF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/cif",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cif"
+					]
+				}
+			},
+			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

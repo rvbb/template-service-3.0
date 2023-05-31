@@ -1,5 +1,6 @@
 package com.rvbb.food.template.controller.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -79,7 +80,7 @@ public class FinanceInfoControllerImpl implements FinanceInfoController {
     @LogIt
     public Response<Page<FinanceInfoRes>> filter(String[] sort, String[] condition,
                                                  @Valid @Min(value = 0L, message = "The value must be positive") int page,
-                                                 @Valid @Min(value = 0L, message = "The value must be positive") int size) {
+                                                 @Valid @Min(value = 0L, message = "The value must be positive") int size) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
         loanFinInfoValidator.validateFilter(sort, condition, page, size);
         return Response.ok(loanFinInfoService.doFilter(sort, condition, page, size));
     }

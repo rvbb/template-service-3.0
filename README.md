@@ -33,10 +33,12 @@
 ### Unit Test
 	> How to test CRUD API docs:  
 	    1. Start Postgres: 
-           docker run --name local-postgres --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Devdev123 -e PGDATA=/var/lib/postgresql/data/pgdata -v /tmp:/var/lib/postgresql/data -p 5432:5432 -it postgres:14.1-alpine
+            rm -rf /tmp/pgdata
+            docker run --name local-postgres --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Devdev123 -e PGDATA=/var/lib/postgresql/data/pgdata -v /tmp:/var/lib/postgresql/data -p 5432:5432 -it postgres:14.1-alpine
         2. Browse APIs via swagger: http://localhost:8080/api-docs
     > How to test CIF APIs (present use OpenFeign):
         1. Use Mountebank
+                rm -rf /tmp/pgdata
                 docker run -v ${PWD}/src/main/resources/static:/imposters -p 20231:20231 -p 2525:2525 -d jkris/mountebank --configfile /imposters/cif_apis.ejs --allowInjection
                 or start from separated project  https://github.com/rvbb/mountebank.git
         2. Start Postgres

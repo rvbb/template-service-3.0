@@ -1,17 +1,15 @@
 package com.rvbb.food.template.repository;
 
-
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoInput;
-import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
 import com.rvbb.food.template.dto.financeinfo.FinanceInfoFilterInput;
+import com.rvbb.food.template.dto.financeinfo.FinanceInfoRes;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Repository;
 
+import java.lang.reflect.InvocationTargetException;
+
 @Repository
 public interface FinanceInfoXpanRepository {
-
-    boolean updateByStatus(FinanceInfoInput request, Short status);
     Page<FinanceInfoRes> search(FinanceInfoFilterInput filter);
-    Page<FinanceInfoRes> search(String[] sort, String[] condition, int page, int size);
 
+    Page<FinanceInfoRes> search(String[] sort, String[] condition, int page, int size) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;
 }

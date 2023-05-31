@@ -1,5 +1,6 @@
 package com.rvbb.food.template.controller;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -100,7 +101,7 @@ public interface FinanceInfoController {
     @Operation(summary = "List",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Success",
-                            content = @Content(array = @ArraySchema(uniqueItems = false, schema = @Schema(implementation = FinanceInfoInput.class)))),
+                            content = @Content(array = @ArraySchema(schema = @Schema(implementation = FinanceInfoInput.class)))),
                     @ApiResponse(responseCode = "400", description = "Bad request",
                             content = @Content(schema = @Schema(implementation = Error.class))),
                     @ApiResponse(responseCode = "404", description = "Not Found Exception",
@@ -146,7 +147,7 @@ public interface FinanceInfoController {
 
     @Operation(summary = "Filter with Pageable",responses = {
             @ApiResponse(responseCode = "200", description = "Success",
-                    content = @Content(array = @ArraySchema(uniqueItems = false, schema = @Schema(implementation = FinanceInfoRes.class)))),
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = FinanceInfoRes.class)))),
             @ApiResponse(responseCode = "400", description = "Bad request",
                     content = @Content(schema = @Schema(implementation = Error.class))),
             @ApiResponse(responseCode = "404", description = "Not Found Exception",
@@ -161,27 +162,27 @@ public interface FinanceInfoController {
             @Parameter(
                     name = "sort",
                     description = "multi column/field name and value",
-                    example = "sort=desc(col1)&sort=asc(col3)",
-                    required = false)
+                    example = "sort=desc(col1)&sort=asc(col3)"
+            )
             @RequestParam(defaultValue = "desc(id)", required = false) String[] sort,
             @Parameter(
                     name = "condition",
                     description = "multi column/field name and value",
-                    example = "condition=condition=equal(col1:1)&condition=greater(col2:abc)",
-                    required = false)
+                    example = "condition=condition=equal(col1:1)&condition=greater(col2:abc)"
+            )
             @RequestParam(required = false) String[] condition,
             @Parameter(
                     name = "page",
                     description = "current page number into ",
-                    example = "1",
-                    required = false)
+                    example = "1"
+            )
             @RequestParam(defaultValue = "0", required = false) @Valid @Min(value = 0L,
                     message = "The value must be positive") int page,
             @Parameter(
                     name = "size",
                     description = "page size - number of item per page",
-                    example = "50",
-                    required = false)
+                    example = "50"
+            )
             @RequestParam(defaultValue = "50", required = false) @Valid @Min(value = 0L,
-                    message = "The value must be positive") int size);
+                    message = "The value must be positive") int size) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException;
 }
