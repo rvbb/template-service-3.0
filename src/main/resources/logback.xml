@@ -21,7 +21,7 @@
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${DIR_LOG}/archived/${FILENAME}.%d{ddMMMyyyy}.%i.log
             </fileNamePattern>
-            <maxFileSize>5KB</maxFileSize>
+            <maxFileSize>20MB</maxFileSize>
             <totalSizeCap>20GB</totalSizeCap>
             <maxHistory>60</maxHistory>
         </rollingPolicy>
